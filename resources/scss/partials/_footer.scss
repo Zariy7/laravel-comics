@@ -1,0 +1,58 @@
+@use './variables' as *;
+
+footer{
+
+    .dc-background{
+        background-image: url(".././assets/img/footer-bg.jpg");
+        display: flex;
+
+        .dc-logo-div{
+            height: 350px;
+            .dc-logo-bg{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                margin: 0px;
+            }
+        }
+    }
+
+    .sign-up-btn{
+        margin: 15px;
+        padding: 10px;
+        border: 3px solid $primary_color;
+        color: white;
+    }
+
+    .follow-btn{
+        font-style: bolder;
+        font-size: 1.5rem;
+        color: $primary_color;
+    }
+
+    img{
+        margin: 5px;
+    }
+}
+.container{
+    display: flex;
+    margin: 0 auto;
+    max-width: 60%;
+    justify-content: space-between;
+
+    .menu-title{
+        font-size: larger;
+        color: white;
+        margin: 10px 0px;
+    }
+    
+    .menu-option{
+        font-size: medium;
+        color: gray;
+    }
+    
+    ul{
+        padding: 10px 0px;
+        list-style-type: none;
+    }
+}
