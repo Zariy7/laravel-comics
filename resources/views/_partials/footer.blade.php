@@ -1,4 +1,10 @@
 <footer class="bg-gray">
+    <?php 
+        $dcComics = config('dccomics');
+        $dcCompany = config('dccompany');
+        $shop = config('shop');
+        $sites = config('sites');
+    ?>
     <div class="dc-background">
         <div class="container">
             <div>

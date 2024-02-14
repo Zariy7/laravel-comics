@@ -14,16 +14,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $data = [
-        'menu' => $menu = config('menu'),
-        'dcComics' => $dcComics = config('dccomics'),
-        'dcCompany' => $dcCompany = config('dccompany'),
-        'shop' => $shop = config('shop'),
-        'sites' => $sites = config('sites'),
-        'comics' => $comics = config('comics'),
-    ];
+    $comics = config('comics');
 
     //dd($data);
     
-    return view('homepage', $data);
+    return view('homepage', compact('comics'));
 });
+
+Route::get('/{param}', function($param) {
+    $comics = config('comics');
+    
+    $focus = null;
+    foreach($comics as $issue){
+        if($issue['id'] == $param){
+            $focus = $issue;
+        }
+    }
+
+    //dd($focus);
+
+    return view('home-detail', compact('focus', 'comics'));
+})->name('home-detail');
