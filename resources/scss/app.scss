@@ -2,3 +2,32 @@
 @import './partials/footer';
 @import './partials/header';
 @import './partials/variables';
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.w-50{
+    width: 50%;
+}
+
+.d-flex{
+    display: flex;
+    align-items: center;
+}
+
+.bg-gray{
+    background-color: rgb(59, 59, 59);
+}
+
+.center-text{
+    text-align: center;
+}
+
+.p-15{
+    padding: 15px;
+}
