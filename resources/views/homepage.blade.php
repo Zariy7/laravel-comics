@@ -9,6 +9,30 @@
     </head>
     <body>
         @include('_partials.header')
+        <main>
+            <div class="bg-gray">
+                <div class="jumbo-container">
+                    <img src="{{ Vite::asset('resources/img/jumbotron.jpg')}}" class="jumbo">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        @foreach ($comics as $issue)
+                        <div class="comic-col">
+                                <img src="{{ $issue['thumb'] }}" class="comic-img">
+                                <div class="comic-title">
+                                    {{ $issue['series'] }}
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+                <div class="center-text p-15">
+                    <span class="load-btn">
+                        LOAD MORE
+                    </span>
+                </div>
+            </div>
+        </main>
         @include('_partials.footer')
     </body>
 </html>

@@ -1,0 +1,47 @@
+@use './variables' as *;
+
+body{
+    overflow-x: hidden;
+}
+
+.container{
+    display: flex;
+    margin: 0 auto;
+    max-width: 60%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.jumbo-container{
+    height: 400px;
+    width: 100vw;
+    
+    .jumbo{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.load-btn{
+    padding: 10px 40px;
+    color: white;
+    background-color: $primary_color;
+}
+
+.comic-col{
+    width: calc(100% / 6 - 20px);
+}
+
+.comic-img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.comic-title{
+    text-transform: uppercase;
+    font-style: bold;
+    color: white;
+}

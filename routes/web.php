@@ -20,6 +20,7 @@ Route::get('/', function () {
         'dcCompany' => $dcCompany = config('dccompany'),
         'shop' => $shop = config('shop'),
         'sites' => $sites = config('sites'),
+        'comics' => $comics = config('comics'),
     ];
 
     //dd($data);
